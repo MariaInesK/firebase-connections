@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import firebase from 'firebase/app';
+import { credentials } from './credentials';
+import "firebase/auth";
+import "firebase/firestore";
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +12,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor() {}
+  initializeApp(){
+    firebase.initializeApp(credentials);
+  }
 }
+
+
